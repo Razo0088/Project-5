@@ -1,0 +1,143 @@
+.Contact {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 50px 20px 50px 20px;
+  font-weight: 100;
+  font-family: "Courier New", Courier, monospace;
+  .register {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+    .inp {
+      margin-top: 20px;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      justify-content: flex-start;
+      input {
+        width: 100%;
+        height: 30px;
+        margin-top: 5px;
+        background:  #e5e5e5;
+        border: none;
+        border-bottom: 0.5px solid;
+
+      }
+      button {
+        margin-top: 5px;
+        background-color: black;
+        color: white;
+        width: 100%;
+        height: 30px;
+        border: none;
+        transition: 0.9s;
+        &:hover{
+            background: gray;
+            transition: 0.9s;
+            color: black;
+        }
+      }
+    }
+  }
+  .find_us {
+    padding-left: 60px;
+    width: 50%;
+    display: flex;
+    align-items: flex-start; 
+    gap: 25px;
+    font-size: 13px;
+
+    .about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 9px;
+      a {
+        color: black;
+        &:hover{
+            color: green;
+        }
+      }
+    }
+    .store {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      a {
+        color: black;
+        &:hover{
+            color: green;
+        }
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    // Планшеты
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    .register,
+    .find_us {
+      width: 80%;
+      padding-left: 0;
+    }
+
+    .find_us {
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 600px) {
+    // Смартфоны
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 10px;
+
+    .register,
+    .find_us {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .find_us {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+
+      .about,
+      .store {
+        align-items: center;
+      }
+    }
+
+    .inp input,
+    .inp button {
+      height: 40px;
+      font-size: 14px;
+    }}
+    .social{
+        display: flex;
+        gap: 3px;
+        svg{
+            color:red;
+            &:hover {
+                color: green;;
+
+            }
+        }
+    }
+}

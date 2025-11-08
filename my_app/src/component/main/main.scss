@@ -1,0 +1,240 @@
+main {
+  width: calc(100% - 200px);
+  min-width: 320px;
+  height: auto;
+  margin-left: 300px;
+  transition: all 0.3s ease;
+
+  section {
+    .jeans {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 0 25px 25px;
+
+      span {
+        color: #cbb26a;
+        font-size: 17px;
+
+        svg {
+          color: #cbb26a;
+          font-size: 17px;
+        }
+      }
+
+      h3 {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 300;
+        color: #cbb26a;
+        font-size: 30px;
+        letter-spacing: 2px;
+      }
+    }
+
+    .new {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      gap: 20px;
+      padding-top: 20px;
+      color: white;
+    }
+    h5 {
+      margin: 5px;
+      font-size: 15px;
+      font-weight: 100;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .shop_jens {
+      margin-top: 15px;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .blok1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        .box1 {
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 300px;
+          height: 330px;
+           border-radius: 10px;
+          .new_div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            gap: 15px;
+            transition: 0.3s ease;
+               
+            p {
+              position: absolute;
+              top: 0;
+              left: 0;
+              background: black;
+              width: 30px;
+              height: 20px;
+              padding: 2px;
+              font-size: 12px;
+              border-radius: 3px;
+            }
+
+            button {
+              background-color: white;
+              color: black;
+              border: none;
+              padding: 8px 15px;
+              cursor: pointer;
+              font-size: 15px;
+              border-radius: 4px;
+              opacity: 0;
+
+              &:hover {
+                transition: 1s;
+                opacity: 1;
+                background-color: gray;
+                color: white;
+              }
+            }
+          }
+          &:hover {
+            button {
+              transition: 1s;
+              opacity: 1;
+              background-color: rgb(9, 9, 9);
+              color: white;
+            }
+          }
+
+          /* ---------- Планшеты ---------- */
+        }
+      }
+      .blok2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        .box1 {
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 300px;
+          height: 330px;
+          border-radius: 10px;
+          .new_div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            gap: 15px;
+            transition: 0.3s ease;
+            p {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 30px;
+              height: 20px;
+              background: black;
+              padding: 2px;
+              font-size: 12px;
+              border-radius: 3px;
+            }
+
+            button {
+              background-color: white;
+              color: black;
+              border: none;
+              padding: 8px 15px;
+              cursor: pointer;
+              font-size: 15px;
+              border-radius: 4px;
+              opacity: 0;
+
+              &:hover {
+                transition: 1s;
+                opacity: 1;
+                background-color: gray;
+                color: white;
+              }
+            }
+          }
+          &:hover {
+            button {
+              transition: 1s;
+              opacity: 1;
+              background-color: rgb(9, 9, 9);
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .shop_jens {
+      .blok1,
+      .blok2 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .box1 div,
+      .box2 div {
+        width: 90%;
+      }
+    }
+  }
+  .foot {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    p {
+      font-size: 13px;
+      a {
+        color: red;
+        text-decoration: none;
+        &:hover {
+          color: green;
+        }
+      }
+    }
+  }
+}
