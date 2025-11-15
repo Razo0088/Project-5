@@ -122,7 +122,8 @@ header {
         display: flex;
         align-items: start;
         justify-content: flex-start;
-        color:white;
+        li{
+          color:white;
       }
       
       &.open {
