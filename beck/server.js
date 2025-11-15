@@ -5,12 +5,22 @@ const fs = require("fs")
 const path = require("path")
 const nodemailer = require("nodemailer");
 const app = express()
-
+const allowedOrigins = [
+  "https://stellular-khapse-37223b.netlify.app",
+  "http://localhost:3000"
+];
 app.use(cors({
- origin: https://project-5-vyzi.onrender.com,
-     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
+
 app.use(express.json())
 
 
