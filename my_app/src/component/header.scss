@@ -122,17 +122,17 @@ header {
         display: flex;
         align-items: start;
         justify-content: flex-start;
-        li{
-          color:white;
-      }
-      
-      &.open {
+          &.open {
         max-height: 500px; 
       
       }
+        li{
+          color:white;
+        }
+    
     }
   }
-
+  }
   @media (max-width: 767px) {
     height: 80px;
     nav ul li {
