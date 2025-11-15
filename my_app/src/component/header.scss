@@ -116,16 +116,16 @@ header {
       justify-content: flex-start;
       padding: 5px;
       z-index: 1000;
+            &.open {
+        max-height: 500px; 
       
+      }
       ul {
         flex-direction: column;
         display: flex;
         align-items: start;
         justify-content: flex-start;
-          &.open {
-        max-height: 500px; 
-      
-      }
+    
         li{
           color:white;
         }
