@@ -6,7 +6,9 @@ const path = require("path")
 const nodemailer = require("nodemailer");
 const app = express()
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://stellular-khapse-37223b.netlify.app/'
+}));
 app.use(express.json())
 
 
@@ -103,7 +105,11 @@ app.get("/message", (req, res) => {
 })
 
 
-app.listen(5000, () => {
-    console.log("hastatvec kape serveri");
+// app.listen(5000, () => {
+//     console.log("hastatvec kape serveri");
 
-})
+// })
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
