@@ -12,7 +12,7 @@ export default function Contact() {
     // const [list,setList] = useState([])
     useEffect(() => {
         const get = () => {
-            fetch(`${REACT_APP_BACKEND_URL}/message`).then((response) => {
+            fetch(`${process.env.REACT_APP_BACKEND_URL}/message`).then((response) => {
                 if (!response.ok) {
                     throw new Error("chka patasxan Beckic")
                 } return response.json()
@@ -28,7 +28,7 @@ export default function Contact() {
 
     const onsubmit = (data) => {
         console.log(data);
-        fetch("http://localhost:5000/message", {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/message`, {
             method: "POST",
             body: JSON.stringify({ ...data }),
             headers: { "Content-Type": "application/json" }
