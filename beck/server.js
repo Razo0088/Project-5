@@ -7,7 +7,9 @@ const nodemailer = require("nodemailer");
 const app = express()
 
 app.use(cors({
-    origin: 'https://stellular-khapse-37223b.netlify.app/'
+ origin: https://project-5-vyzi.onrender.com,
+     methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
 }));
 app.use(express.json())
 
