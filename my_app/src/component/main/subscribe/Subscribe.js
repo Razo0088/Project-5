@@ -13,7 +13,7 @@ export default function Subscribe() {
             return;
         }
         try {
-            const response = await fetch("`${REACT_APP_BACKEND_URL}`/subscribe", {
+            const response = await fetch(`${REACT_APP_BACKEND_URL}/subscribe`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ Email: value.toLowerCase() })
