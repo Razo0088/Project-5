@@ -45,6 +45,9 @@ header {
     align-items: center;
     justify-content: flex-start;
     gap: 70px;
+    position: static;
+    vmax-height: none;
+    overflow: visible;
 
     ul {
       width: 100%;
@@ -100,7 +103,6 @@ header {
     }
 
     nav {
-      
       position: absolute;
       top: 70px;
       left: 0;
