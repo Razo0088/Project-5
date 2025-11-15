@@ -12,7 +12,7 @@ export default function Contact() {
     // const [list,setList] = useState([])
     useEffect(() => {
         const get = () => {
-            fetch("`${REACT_APP_BACKEND_URL}`/message").then((response) => {
+            fetch(`${REACT_APP_BACKEND_URL}/message`).then((response) => {
                 if (!response.ok) {
                     throw new Error("chka patasxan Beckic")
                 } return response.json()
