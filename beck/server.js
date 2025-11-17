@@ -25,24 +25,24 @@ app.use(express.json())
 
 
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.sendgrid.net",
-  port: 587,
-  auth: {
-    user: "apikey",                    
-    pass: process.env.SENDGRID_API_KEY, 
-  },
-});
-
-
-
 // const transporter = nodemailer.createTransport({
-//     service: "gmail",
-//     auth: {
-//         user: process.env.USER_EMAIL,  
-//         pass: process.env.USER_PASS,
-//     },
+//   host: "smtp.sendgrid.net",
+//   port: 587,
+//   auth: {
+//     user: "apikey",                    
+//     pass: process.env.SENDGRID_API_KEY, 
+//   },
 // });
+
+
+
+const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: process.env.USER_EMAIL,  
+        pass: process.env.USER_PASS,
+    },
+});
 
 const userFile = path.join(__dirname, "message.json")
 if (!fs.existsSync(userFile)) { fs.writeFileSync(userFile, JSON.stringify({ contact: [], subscribe: [] },null ,2), "utf-8") }
@@ -55,14 +55,14 @@ app.post("/message", (req, res) => {
     res.json({ message: "tvyalnere barehajox poxancvelken json" })
 
     const mailOption = {
-        from: "no-reply@sendgrid.net", 
+        from: "razo1992@gevorgyan@gmail.com", 
         to: "razo0088@mail.ru", 
         subject: "You have been contacted",
         text: `🙌 new appeal: \n  👱🏾 Name: ${Name} \n 📫Email :${Email} \n 📎Subject :${Subject} \n 💬Message:${Message}`,
     };
 
     const mailOption1 = {
-        from: "no-reply@sendgrid.net", 
+        from: "razo1992@gevorgyan@gmail.com", 
         to: Email,
         subject: "Request",
         text: ` 🙌 Your request \n  👱🏾 Anun: ${Name} \n 📫Email :${Email} \n 📎Npatak :${Subject} \n 💬Namak:${Message}`,
@@ -92,14 +92,14 @@ app.post("/subscribe", (req, res) => {
     res.json({ message: "Subscriber saved!" });
    
     const mailOption = {
-    from: "no-reply@sendgrid.net.com",
+    from: "razo1992@gevorgyan@gmail.com",
     to: "razo0088@mail.ru",
         subject: " You have a new subscriber",
         text: `🙌 New Subscriber: \n   📫Email :${Email} \n `,
   };
 
   const mailOption1 = {
-    from: "no-reply@sendgrid.net", 
+    from: "razo1992@gevorgyan@gmail.com", 
     to: Email,
     subject: "hajoxucyamb uxarkvec",
     text: `🙌 duq gracvelek ays Maylov\n  📫Email :${Email} \n `,
